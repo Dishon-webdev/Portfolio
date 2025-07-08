@@ -417,3 +417,70 @@ footer .made-with .tech i {
   color: #ffc107;
   font-size: 1.1rem;
 }
+
+#certificates img {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3); /* Match About section */
+  filter: drop-shadow(0 0 3px rgba(255, 193, 7, 0.6)); /* Match Skills section */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#certificates img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(255, 193, 7, 0.4); /* Enhance glow on hover */
+}
+
+/* === SKILLS SECTION CLEAN ALIGNMENT === */
+#skills .col-6.col-md-3 {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.25);
+  padding: 30px 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#skills img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 3px rgba(255, 193, 7, 0.6));
+}
+
+#skills p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #222;
+  margin: 0;
+}
+
+#projects .card {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.25);
+  transition: transform 0.3s ease;
+  height: 100%; /* Stretch to match column height */
+  display: flex;
+  flex-direction: column;
+}
+
+#projects .card-img-top {
+  height: 180px; /* Fixed image height */
+  object-fit: cover; /* Crop image to fit */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#projects .card-body {
+  flex-grow: 1;
+}
+
+#projects .card-footer {
+  background: transparent;
+  border-top: none;
+}
