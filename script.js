@@ -1,0 +1,80 @@
+// === Preloader ===
+// Hides the preloader after page fully loads
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.style.opacity = '0';
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 500);
+});
+
+// === Scroll Animation ===
+// Adds 'visible' class to elements with 'fade-in' when they enter viewport
+function handleScrollAnimation() {
+  const elements = document.querySelectorAll('.fade-in');
+  const triggerBottom = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
+}
+window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('load', handleScrollAnimation); // run on load too
+
+// === Dark/Light Mode Toggle ===
+// Switches between dark and light theme and updates button icon
+const toggleBtn = document.getElementById('darkModeToggle');
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+}
+
+// === Back to Top Button ===
+// Shows button after scrolling down 300px, scrolls up on click
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// === Auto Footer Year ===
+// Automatically updates the footer year
+document.addEventListener('DOMContentLoaded', () => {
+  const yearSpan = document.getElementById('currentYear');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+});
+
+// === Contact Form Fake Submission ===
+// Shows success message on form submit and clears the form
+function handleSubmit(event) {
+  event.preventDefault();
+  const msg = document.getElementById('form-msg');
+  msg.classList.remove('d-none');
+  setTimeout(() => {
+    msg.classList.add('d-none');
+  }, 3000);
+  event.target.reset();
+  return false;
+}
+
+// === Navbar Scroll Effect ===
+// Adds shadow/background to navbar on scroll for better visibility
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
