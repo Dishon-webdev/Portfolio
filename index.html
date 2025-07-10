@@ -5,6 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="Dishon Consalves Portfolio – Frontend Developer with experience in HTML, CSS, JavaScript, Bootstrap, and React. Explore my projects, certificates, skills, and contact me."
+    />
+    <meta
+      name="keywords"
+      content="Dishon Consalves, Frontend Developer, Portfolio, Web Developer, HTML, CSS, JavaScript, React, Bootstrap, GitHub, Resume"
+    />
+    <meta name="author" content="Dishon Consalves" />
+
     <!-- Title of the webpage shown in the browser tab -->
     <title>Dishon | Portfolio</title>
 
@@ -163,7 +174,29 @@
               </div>
               <div class="card-footer text-center">
                 <a
-                  href="https://dishon-webdev.github.io/Simple-Calculator/"
+                  href="https://dishon-webdev.github.io/Resume/"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow">
+              <img
+                src="images/blog (1).png"
+                class="card-img-top"
+                alt="Project Thumbnail"
+              />
+              <div class="card-body">
+                <h5 class="card-title bg-warning">Simple Blog Page</h5>
+                <p class="card-text">A basic calculator app...</p>
+              </div>
+              <div class="card-footer text-center">
+                <a
+                  href="https://dishon-webdev.github.io/Bootstrap-5/"
                   target="_blank"
                   class="btn btn-primary"
                   >View Project</a
@@ -185,7 +218,29 @@
               </div>
               <div class="card-footer text-center">
                 <a
-                  href="https://dishon-webdev.github.io/Simple-Calculator/"
+                  href="https://dishon-webdev.github.io/Smart-Clock/"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow">
+              <img
+                src="images/game.png"
+                class="card-img-top"
+                alt="Project Thumbnail"
+              />
+              <div class="card-body">
+                <h5 class="card-title bg-warning">Tic Tac Toe(Game)</h5>
+                <p class="card-text">A basic calculator app...</p>
+              </div>
+              <div class="card-footer text-center">
+                <a
+                  href="https://dishon-webdev.github.io/Tic-Tac-Toe/"
                   target="_blank"
                   class="btn btn-primary"
                   >View Project</a
@@ -322,41 +377,29 @@
     <section id="contact" class="py-5 fade-in">
       <div class="container">
         <h2 class="text-center mb-4">Contact Me</h2>
-        <form
-          class="mx-auto"
-          style="max-width: 600px"
-          onsubmit="return handleSubmit(event)"
-        >
-          <!-- Input fields -->
-          <div class="mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Your Name"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <input
-              type="email"
-              class="form-control"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <textarea
-              class="form-control"
-              rows="4"
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send</button>
-          <p id="form-msg" class="text-success mt-3 d-none">
-            Thanks! Message sent.
-          </p>
-        </form>
+        <form class="mx-auto needs-validation" style="max-width: 600px" onsubmit="return handleSubmit(event)" novalidate>
+  <div class="mb-3">
+    <label for="name" class="form-label">Your Name</label>
+    <input type="text" id="name" class="form-control" placeholder="Your Name" required />
+    <div class="invalid-feedback">Please enter your name.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Your Email</label>
+    <input type="email" id="email" class="form-control" placeholder="Your Email" required />
+    <div class="invalid-feedback">Please enter a valid email address.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="message" class="form-label">Your Message</label>
+    <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+    <div class="invalid-feedback">Please enter your message.</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send</button>
+  <p id="form-msg" class="text-success mt-3 d-none">Thanks! Message sent.</p>
+</form>
+
       </div>
     </section>
 

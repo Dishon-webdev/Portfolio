@@ -55,16 +55,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// === Contact Form Fake Submission ===
-// Shows success message on form submit and clears the form
+// === Contact Form Validation & Submission ===
+// Validates form before showing success message
 function handleSubmit(event) {
   event.preventDefault();
+  const form = event.target;
+
+  if (!form.checkValidity()) {
+    form.classList.add('was-validated');
+    return false; // Prevent submission if invalid
+  }
+
   const msg = document.getElementById('form-msg');
   msg.classList.remove('d-none');
   setTimeout(() => {
     msg.classList.add('d-none');
   }, 3000);
-  event.target.reset();
+
+  form.reset();
+  form.classList.remove('was-validated');
   return false;
 }
 
@@ -77,4 +86,14 @@ window.addEventListener('scroll', () => {
   } else {
     navbar.classList.remove('scrolled');
   }
+});
+
+// === Close navbar on link click (for mobile) ===
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse.classList.contains('show')) {
+      new bootstrap.Collapse(navbarCollapse).toggle();
+    }
+  });
 });
