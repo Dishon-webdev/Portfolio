@@ -1,75 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags for responsiveness and character encoding -->
+    <!-- Required meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Meta tags for SEO -->
+    <!-- Primary SEO -->
+    <title>Dishon Consalves | Full Stack Developer</title>
     <meta
       name="description"
-      content="Dishon Consalves Portfolio – Frontend Developer with experience in HTML, CSS, JavaScript, Bootstrap, and React. Explore my projects, certificates, skills, and contact me."
+      content="Portfolio of Dishon Consalves — Full Stack Developer (React, Node.js, Express, MySQL). Explore projects, skills, certificates, and ways to get in touch."
     />
     <meta
       name="keywords"
-      content="Dishon Consalves, Frontend Developer, Portfolio, Web Developer, HTML, CSS, JavaScript, React, Bootstrap, GitHub, Resume"
+      content="Dishon Consalves, Full Stack Developer, React, Node.js, Express, MySQL, JavaScript, Portfolio, Web Developer"
     />
     <meta name="author" content="Dishon Consalves" />
+    <link rel="canonical" href="https://dishon-webdev.github.io/" />
+    <meta name="theme-color" content="#0b1220" />
 
-    <!-- Title of the webpage shown in the browser tab -->
-    <title>Dishon | Portfolio</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Dishon Consalves | Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Projects, skills, and certificates by Dishon Consalves."
+    />
+    <meta property="og:image" content="images/og-cover.jpg" />
+    <meta property="og:url" content="https://dishon-webdev.github.io/" />
 
-    <!-- Bootstrap CSS -->
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Dishon Consalves | Full Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Projects, skills, and certificates by Dishon Consalves."
+    />
+    <meta name="twitter:image" content="images/og-cover.jpg" />
+
+    <!-- JSON-LD (Person) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dishon Consalves",
+        "headline": "Full Stack Developer",
+        "url": "https://dishon-webdev.github.io/",
+        "sameAs": [
+          "https://github.com/Dishon-webdev",
+          "https://www.linkedin.com/in/dishon-consalves-7b492935b"
+        ]
+      }
+    </script>
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      href="images/Preloader.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="alternate icon"
+      href="images/Preloader.png"
+      type="image/png"
+      sizes="64x64"
+    />
+    <link rel="apple-touch-icon" href="images/Preloader.png" sizes="180x180" />
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Custom external stylesheet -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- App CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font Awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
   </head>
-  <body>
-    <!-- Preloader spinner before page loads -->
-    <div id="preloader">
-      <div class="spinner"></div>
+  <body data-bs-offset="100">
+    <!-- Preloader (mass look, your image) -->
+    <div id="preloader" aria-hidden="true">
+      <div class="loader">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+
+        <!-- no gold box; your image -->
+        <div class="logo">
+          <img
+            src="images/Preloader.png"
+            class="logo-img"
+            alt="Dishon Consalves logo"
+          />
+        </div>
+
+        <div class="loader-text">Loading<span class="dots"></span></div>
+      </div>
     </div>
 
-    <!-- Navigation bar with dark mode toggle -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass-nav">
       <div class="container">
-        <a class="navbar-brand custom-font" href="#">Dishon Consalves</a>
-        <!-- Dark mode toggle button -->
-        <button class="btn btn-sm btn-outline-light ms-3" id="darkModeToggle">
-          🌙
-        </button>
-
-        <!-- Hamburger menu for mobile -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+        <a
+          class="navbar-brand brand custom-font d-flex align-items-center gap-2"
+          href="#home"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <img src="images/Preloader.png" alt="Logo" width="28" height="28" />
+          <span>Dishon</span>
+        </a>
 
-        <!-- Navigation links -->
+        <div class="d-flex align-items-center gap-2">
+          <button
+            class="btn btn-sm theme-toggle"
+            id="darkModeToggle"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
         <div id="navbarNav" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -93,355 +173,633 @@
       </div>
     </nav>
 
-    <!-- Hero/Home Section -->
-    <section id="home" class="text-center text-white premium-bg py-5 fade-in">
+    <!-- Hero -->
+    <header id="home" class="hero premium-bg fade-in with-sticky-offset">
+      <div class="container d-grid gap-4 align-items-center hero-grid">
+        <div class="hero-content text-center text-lg-start">
+          <h1 class="display-4 custom-font mb-3">Hi, I’m Dishon.</h1>
+          <p class="lead mb-4">
+            Full Stack Developer • React • Node.js • MySQL
+          </p>
+          <div
+            class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2"
+          >
+            <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+            <a
+              href="Dishon-Consalves-Resume.pdf"
+              class="btn btn-outline-light btn-lg"
+              download
+              >Download Resume</a
+            >
+          </div>
+        </div>
+        <div class="hero-art text-center text-lg-end">
+          <div class="hero-card shadow-lg">
+            <img
+              src="images/coding.png"
+              alt="Developer illustration"
+              width="480"
+              height="480"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave" aria-hidden="true"></div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="section fade-in">
       <div class="container">
-        <h1 class="display-4 custom-font">Hi, I'm Dishon C.</h1>
-        <p class="lead">Frontend Developer</p>
-        <a href="#contact" class="btn btn-light m-2">Contact Me</a>
-        <a
-          href="Dishon Consalves - Resume.pdf"
-          class="btn btn-outline-light m-2"
-          >Download Resume</a
-        >
+        <div class="section-head">
+          <h2>About Me</h2>
+          <p class="section-sub">
+            I design clean interfaces and build reliable APIs.
+          </p>
+        </div>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="about-text">
+              I’m a full stack developer focused on building fast, accessible,
+              and maintainable apps. Core stack: <strong>React</strong>,
+              <strong>Node.js</strong>, <strong>Express</strong>, and
+              <strong>MySQL</strong>. I care about code quality, performance,
+              and UX polish.
+            </p>
+            <ul class="about-list">
+              <li>
+                <i class="fa-regular fa-circle-check"></i> Responsive,
+                mobile-first layouts
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-check"></i> RESTful APIs &
+                authentication
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-check"></i> Reusable components &
+                clean architecture
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Years Learning</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">∞</span>
+                <span class="stat-label">Curiosity</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5 fade-in">
+    <!-- Projects -->
+    <section id="projects" class="section alt fade-in">
       <div class="container">
-        <h2 class="text-center mb-4">About Me</h2>
-        <div class="row align-items-center">
-          <div class="col-md-4 text-center">
-            <img src="images/coding.png" class="img-fluid" alt="Profile" />
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="section-sub">
+            Curated work with a consistent, scannable layout.
+          </p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters" id="project-filters" aria-label="Project filters">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="javascript">JavaScript</button>
+          <button class="chip" data-filter="react">React</button>
+          <button class="chip" data-filter="bootstrap">Bootstrap</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="row g-4" id="project-grid">
+          <!-- Item -->
+          <div
+            class="col-12 col-md-6 col-xl-4 project-item"
+            data-tags="javascript"
+          >
+            <article class="pcard h-100">
+              <div class="pcard-media">
+                <img
+                  src="images/Simple Calculator Design on Blue Background.png"
+                  alt="Simple Calculator app screenshot"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+                <div class="pcard-tags">
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">Frontend</span>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h3 class="pcard-title">Simple Calculator</h3>
+                <p class="pcard-desc">
+                  Clean calculator with keyboard support and guarded operations
+                  (decimals, divide-by-zero).
+                </p>
+                <div class="pcard-actions">
+                  <a
+                    class="btn btn-primary w-100"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://dishon-webdev.github.io/Simple-Calculator/"
+                  >
+                    <i class="fa-solid fa-up-right-from-square me-1"></i> Live
+                    Demo
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
-          <div class="col-md-8">
-            <p>
-              I am a passionate frontend developer with a solid foundation in
-              HTML, CSS, JavaScript, and React. Over the past years, I have
-              dedicated myself to mastering responsive web design, crafting
-              clean user interfaces, and building dynamic web applications. My
-              curiosity and love for learning continuously push me to explore
-              new tools, frameworks, and best practices to enhance my skills and
-              deliver top-quality work. I am excited to collaborate on projects
-              that challenge me and help solve real-world problems with elegant
-              and efficient code.
+
+          <div
+            class="col-12 col-md-6 col-xl-4 project-item"
+            data-tags="bootstrap"
+          >
+            <article class="pcard h-100">
+              <div class="pcard-media">
+                <img
+                  src="images/cv.png"
+                  alt="Interactive resume preview"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+                <div class="pcard-tags">
+                  <span class="tag">Bootstrap</span><span class="tag">UI</span>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h3 class="pcard-title">Interactive Resume</h3>
+                <p class="pcard-desc">
+                  Single-page resume with smooth anchors, print styles, and
+                  accessible navigation.
+                </p>
+                <div class="pcard-actions">
+                  <a
+                    class="btn btn-primary w-100"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://dishon-webdev.github.io/Resume/"
+                  >
+                    <i class="fa-solid fa-up-right-from-square me-1"></i> Live
+                    Demo
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="col-12 col-md-6 col-xl-4 project-item"
+            data-tags="bootstrap"
+          >
+            <article class="pcard h-100">
+              <div class="pcard-media">
+                <img
+                  src="images/blog (1).png"
+                  alt="Simple blog page screenshot"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+                <div class="pcard-tags">
+                  <span class="tag">Bootstrap</span
+                  ><span class="tag">Layout</span>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h3 class="pcard-title">Simple Blog Page</h3>
+                <p class="pcard-desc">
+                  Blog template with category chips and responsive cards — ready
+                  to extend.
+                </p>
+                <div class="pcard-actions">
+                  <a
+                    class="btn btn-primary w-100"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://dishon-webdev.github.io/Bootstrap-5/"
+                  >
+                    <i class="fa-solid fa-up-right-from-square me-1"></i> Live
+                    Demo
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="col-12 col-md-6 col-xl-4 project-item"
+            data-tags="javascript"
+          >
+            <article class="pcard h-100">
+              <div class="pcard-media">
+                <img
+                  src="images/clock.png"
+                  alt="Smart Clock app screenshot"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+                <div class="pcard-tags">
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">Utility</span>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h3 class="pcard-title">Smart Clock</h3>
+                <p class="pcard-desc">
+                  World clock with locale formatting and dark-mode-aware
+                  visuals.
+                </p>
+                <div class="pcard-actions">
+                  <a
+                    class="btn btn-primary w-100"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://dishon-webdev.github.io/Smart-Clock/"
+                  >
+                    <i class="fa-solid fa-up-right-from-square me-1"></i> Live
+                    Demo
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="col-12 col-md-6 col-xl-4 project-item"
+            data-tags="javascript react"
+          >
+            <article class="pcard h-100">
+              <div class="pcard-media">
+                <img
+                  src="images/game.png"
+                  alt="Tic Tac Toe game screenshot"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+                <div class="pcard-tags">
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">React</span><span class="tag">Game</span>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h3 class="pcard-title">Tic-Tac-Toe</h3>
+                <p class="pcard-desc">
+                  Classic game with win detection, reset, and a simple AI for
+                  practice.
+                </p>
+                <div class="pcard-actions">
+                  <a
+                    class="btn btn-primary w-100"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://dishon-webdev.github.io/Tic-Tac-Toe/"
+                  >
+                    <i class="fa-solid fa-up-right-from-square me-1"></i> Live
+                    Demo
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Show more / less -->
+        <div class="text-center mt-1">
+          <button id="projectsToggle" class="chip chip-ghost">Show more</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates" class="section fade-in">
+      <div class="container">
+        <div class="section-head">
+          <h2>Certificates</h2>
+          <p class="section-sub">Tap to preview. Use arrows to navigate.</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-6 col-lg-4">
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#lightboxModal"
+              data-img="images/GIT_page-0001.jpg"
+            >
+              <img
+                src="images/GIT_page-0001.jpg"
+                class="cert-img"
+                alt="Git fundamentals certificate"
+                loading="lazy"
+                width="1000"
+                height="700"
+              />
+            </a>
+          </div>
+          <div class="col-6 col-lg-4">
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#lightboxModal"
+              data-img="images/AI for Project Management_page-0001.jpg"
+            >
+              <img
+                src="images/AI for Project Management_page-0001.jpg"
+                class="cert-img"
+                alt="AI for Project Management certificate"
+                loading="lazy"
+                width="1000"
+                height="700"
+              />
+            </a>
+          </div>
+          <div class="col-6 col-lg-4">
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#lightboxModal"
+              data-img="images/GitHub_page-0001.jpg"
+            >
+              <img
+                src="images/GitHub_page-0001.jpg"
+                class="cert-img"
+                alt="GitHub certificate"
+                loading="lazy"
+                width="1000"
+                height="700"
+              />
+            </a>
+          </div>
+          <div class="col-6 col-lg-4">
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#lightboxModal"
+              data-img="images/Prompt engineering with chatgpt_page-0001.jpg"
+            >
+              <img
+                src="images/Prompt engineering with chatgpt_page-0001.jpg"
+                class="cert-img"
+                alt="Prompt engineering certificate"
+                loading="lazy"
+                width="1000"
+                height="700"
+              />
+            </a>
+          </div>
+          <div class="col-6 col-lg-4">
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#lightboxModal"
+              data-img="images/Data engineering foundation_page-0001.jpg"
+            >
+              <img
+                src="images/Data engineering foundation_page-0001.jpg"
+                class="cert-img"
+                alt="Data engineering foundations certificate"
+                loading="lazy"
+                width="1000"
+                height="700"
+              />
+            </a>
+          </div>
+          <div class="col-6 col-lg-4">
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#lightboxModal"
+              data-img="images/SEO foundation_page-0001.jpg"
+            >
+              <img
+                src="images/SEO foundation_page-0001.jpg"
+                class="cert-img"
+                alt="SEO foundations certificate"
+                loading="lazy"
+                width="1000"
+                height="700"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section alt fade-in">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="section-sub">Tools I use regularly.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <img src="images/html.png" alt="HTML" loading="lazy" /><span
+              >HTML</span
+            >
+          </div>
+          <div class="skill-card">
+            <img src="images/css-3.png" alt="CSS" loading="lazy" /><span
+              >CSS</span
+            >
+          </div>
+          <div class="skill-card">
+            <img src="images/js.png" alt="JavaScript" loading="lazy" /><span
+              >JavaScript</span
+            >
+          </div>
+          <div class="skill-card">
+            <img src="images/atom.png" alt="React" loading="lazy" /><span
+              >React</span
+            >
+          </div>
+          <div class="skill-card">
+            <img
+              src="images/bootstrap.png"
+              alt="Bootstrap"
+              loading="lazy"
+            /><span>Bootstrap</span>
+          </div>
+          <div class="skill-card">
+            <img src="images/social.png" alt="Git" loading="lazy" /><span
+              >Git</span
+            >
+          </div>
+          <div class="skill-card">
+            <img src="images/github (1).png" alt="GitHub" loading="lazy" /><span
+              >GitHub</span
+            >
+          </div>
+          <div class="skill-card">
+            <img src="images/logo.png" alt="VS Code" loading="lazy" /><span
+              >VS Code</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section fade-in">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="section-sub">Let’s build something great.</p>
+        </div>
+
+        <!-- Replace YOUR_ID with your Formspree ID -->
+        <form
+          class="contact-form needs-validation"
+          onsubmit="return handleSubmit(event)"
+          action="https://formspree.io/f/YOUR_ID"
+          method="POST"
+          novalidate
+        >
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Your Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                class="form-control"
+                placeholder="Your Name"
+                required
+              />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Your Email</label>
+              <input
+                id="email"
+                name="_replyto"
+                type="email"
+                class="form-control"
+                placeholder="name@email.com"
+                required
+              />
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                rows="4"
+                placeholder="How can I help?"
+                required
+              ></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button class="btn btn-primary btn-lg" type="submit">
+              Send Message
+            </button>
+            <p id="form-msg" class="text-success mt-3 d-none" role="status">
+              Thanks! Message sent.
             </p>
           </div>
-        </div>
+        </form>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light fade-in">
-      <div class="container">
-        <h2 class="text-center mb-4">Projects</h2>
-        <div class="row g-4">
-          <!-- Project Cards (add/edit as needed) -->
-          <!-- Repeat this format for new projects -->
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100 shadow">
-              <img
-                src="images/mathemetic.png"
-                class="card-img-top"
-                alt="Project Thumbnail"
-              />
-              <div class="card-body">
-                <h5 class="card-title bg-warning">Simple Calculator</h5>
-                <p class="card-text">A basic calculator app...</p>
-              </div>
-              <div class="card-footer text-center">
-                <a
-                  href="https://dishon-webdev.github.io/Simple-Calculator/"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100 shadow">
-              <img
-                src="images/cv.png"
-                class="card-img-top"
-                alt="Project Thumbnail"
-              />
-              <div class="card-body">
-                <h5 class="card-title bg-warning">Resume</h5>
-                <p class="card-text">Resume</p>
-              </div>
-              <div class="card-footer text-center">
-                <a
-                  href="https://dishon-webdev.github.io/Resume/"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100 shadow">
-              <img
-                src="images/blog (1).png"
-                class="card-img-top"
-                alt="Project Thumbnail"
-              />
-              <div class="card-body">
-                <h5 class="card-title bg-warning">Simple Blog Page</h5>
-                <p class="card-text">A basic calculator app...</p>
-              </div>
-              <div class="card-footer text-center">
-                <a
-                  href="https://dishon-webdev.github.io/Bootstrap-5/"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100 shadow">
-              <img
-                src="images/clock.png"
-                class="card-img-top"
-                alt="Project Thumbnail"
-              />
-              <div class="card-body">
-                <h5 class="card-title bg-warning">Smart Clock</h5>
-                <p class="card-text">A basic calculator app...</p>
-              </div>
-              <div class="card-footer text-center">
-                <a
-                  href="https://dishon-webdev.github.io/Smart-Clock/"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100 shadow">
-              <img
-                src="images/game.png"
-                class="card-img-top"
-                alt="Project Thumbnail"
-              />
-              <div class="card-body">
-                <h5 class="card-title bg-warning">Tic Tac Toe(Game)</h5>
-                <p class="card-text">A basic calculator app...</p>
-              </div>
-              <div class="card-footer text-center">
-                <a
-                  href="https://dishon-webdev.github.io/Tic-Tac-Toe/"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Add more project cards here... -->
-          <!-- You already have 6 placeholders -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Certificates Section -->
-    <section id="certificates" class="py-5 fade-in">
-      <div class="container">
-        <h2 class="text-center mb-4">My Certificates</h2>
-        <div class="row g-3">
-          <!-- Certificate Images (adjust number and paths as needed) -->
-          <!-- Each one inside col-md-4 -->
-          <div class="col-md-4">
-            <img
-              src="images/GIT_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 1"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="images/AI for Project Management_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 2"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="images/GitHub_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 3"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="images/Prompt engineering with chatgpt_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 4"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="images/Data engineering foundation_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 5"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="images/SEO foundation_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 6"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="images/Coursera_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 7"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="images/Web Design_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 8"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="images/Foundations_of_Project_Management_E-Certificate_page-0001.jpg"
-              class="img-fluid rounded shadow"
-              alt="Certificate 9"
-            />
-          </div>
-
-          <!-- Repeat for all certificates -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light fade-in">
-      <div class="container text-center">
-        <h2 class="mb-4">Skills</h2>
-        <div class="row justify-content-center">
-          <!-- Each skill with image and label -->
-          <div class="col-6 col-md-3 mb-4">
-            <img src="images/html.png" alt="HTML" class="img-fluid" />
-            <p>HTML</p>
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="images/css-3.png" alt="HTML" class="img-fluid" />
-            <p>CSS</p>
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="images/js.png" alt="HTML" class="img-fluid" />
-            <p>JavaScript</p>
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="images/atom.png" alt="HTML" class="img-fluid" />
-            <p>React</p>
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="images/bootstrap.png" alt="HTML" class="img-fluid" />
-            <p>Bootstrap</p>
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="images/social.png" alt="HTML" class="img-fluid" />
-            <p>Git</p>
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="images/github (1).png" alt="HTML" class="img-fluid" />
-            <p>GitHub</p>
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="images/logo.png" alt="HTML" class="img-fluid" />
-            <p>Visual Studio Code</p>
-          </div>
-          <!-- Repeat for all skill icons -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section with Form -->
-    <section id="contact" class="py-5 fade-in">
-      <div class="container">
-        <h2 class="text-center mb-4">Contact Me</h2>
-        <form class="mx-auto needs-validation" style="max-width: 600px" onsubmit="return handleSubmit(event)" novalidate>
-  <div class="mb-3">
-    <label for="name" class="form-label">Your Name</label>
-    <input type="text" id="name" class="form-control" placeholder="Your Name" required />
-    <div class="invalid-feedback">Please enter your name.</div>
-  </div>
-
-  <div class="mb-3">
-    <label for="email" class="form-label">Your Email</label>
-    <input type="email" id="email" class="form-control" placeholder="Your Email" required />
-    <div class="invalid-feedback">Please enter a valid email address.</div>
-  </div>
-
-  <div class="mb-3">
-    <label for="message" class="form-label">Your Message</label>
-    <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
-    <div class="invalid-feedback">Please enter your message.</div>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Send</button>
-  <p id="form-msg" class="text-success mt-3 d-none">Thanks! Message sent.</p>
-</form>
-
-      </div>
-    </section>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Back to top">⬆️</button>
+    <!-- Back to Top -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top">
+      ⬆️
+    </button>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white text-center">
+    <footer class="footer">
       <div class="container">
-        <!-- Social media icons -->
-        <div class="mb-3">
-          <a href="https://github.com/Dishon-webdev" target="_blank"
-            ><img src="images/github.png" class="icon" alt="GitHub"
-          /></a>
+        <div class="socials">
+          <a
+            href="https://github.com/Dishon-webdev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
           <a
             href="https://linkedin.com/in/dishon-consalves-7b492935b"
             target="_blank"
-            ><img src="images/linkedin (1).png" class="icon" alt="LinkedIn"
-          /></a>
-          <a href="mailto:consalvesdishon16@gmail.com"
-            ><img src="images/gmail-logo.png" class="icon" alt="Email"
-          /></a>
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="mailto:consalvesdishon16@gmail.com" aria-label="Email"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
         </div>
-
-        <!-- Tech stack mention -->
-        <p class="made-with">
-          Made with
-          <span class="tech"><i class="fab fa-html5"></i> HTML</span>,
-          <span class="tech"><i class="fab fa-css3-alt"></i> CSS</span>,
-          <span class="tech"><i class="fab fa-bootstrap"></i> Bootstrap</span>,
-          <span class="tech"><i class="fab fa-js-square"></i> JS</span>
+        <p class="credit">
+          © <span id="currentYear"></span> Dishon Consalves — Built with HTML,
+          CSS, Bootstrap & JS
         </p>
-
-        <!-- Dynamic copyright -->
-        <p>© <span id="currentYear"></span> Dishon. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark">
+          <div class="modal-body p-0">
+            <img
+              id="lightboxImg"
+              src=""
+              alt="Certificate preview"
+              class="w-100 h-auto"
+            />
+          </div>
+          <button
+            type="button"
+            class="lightbox-nav prev"
+            data-lightbox="prev"
+            aria-label="Previous"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            class="lightbox-nav next"
+            data-lightbox="next"
+            aria-label="Next"
+          >
+            ›
+          </button>
+          <button
+            type="button"
+            class="btn btn-light position-absolute top-0 end-0 m-3"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <!-- Your custom JS -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
